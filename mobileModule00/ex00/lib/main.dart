@@ -11,16 +11,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold( //screen
-      appBar: AppBar( //top bar
-        backgroundColor: Colors.green,
-        title: const Text('Flutter is Fun!'),
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
+              
+              child: const Text(
+                'A simple text',
+                 style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Color.fromARGB(255, 130, 119, 23),
+                  fontSize: 20,
+                  letterSpacing: 2,
+                  
+                )
+                ),
+          ),
+        )
       ),
-      body: Container(
-        child: const Text('Hello World'),
-        margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(10),
-      )
-    ),
     );
   }
 }
