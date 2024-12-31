@@ -12,22 +12,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold( //screen
         body: Center(
-          child: Container(
-            margin: const EdgeInsets.all(10),
-            padding: const EdgeInsets.all(10),
-              
-              child: const Text(
+          child: Column(
+            mainAxisSize: MainAxisSize.min, //adjust column size to its children
+            children: [
+              const Text(
                 'A simple text',
-                 style: TextStyle(
+                  style: TextStyle(
                   color: Colors.white,
                   backgroundColor: Color.fromARGB(255, 130, 119, 23),
                   fontSize: 20,
                   letterSpacing: 2,
-                  
                 )
-                ),
-          ),
-        )
+              ),
+              ElevatedButton(
+                child: Text('Click me'),
+                onPressed: () {
+                  print('Button pressed');
+                },
+              )
+            ]
+        ),
+        ),
       ),
     );
   }
