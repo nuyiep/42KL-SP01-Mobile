@@ -12,7 +12,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // This widget is the root of the app
+
+  String displayText = "A simple text";
+
+  void changeText() {
+    setState(() {
+      displayText = "Hello World";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,18 +29,19 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisSize: MainAxisSize.min, //adjust column size to its children
             children: [
-              const Text(
-                'A simple text',
+              Text(
+                displayText,
                   style: TextStyle(
-                  color: Colors.white,
-                  backgroundColor: Color.fromARGB(255, 130, 119, 23),
-                  fontSize: 20,
-                  letterSpacing: 2,
+                    color: Colors.white,
+                    backgroundColor: Color.fromARGB(255, 130, 119, 23),
+                    fontSize: 20,
+                    letterSpacing: 2,
                 )
               ),
               ElevatedButton(
                 child: Text('Click me'),
                 onPressed: () {
+                  changeText();
                   print('Button pressed');
                 },
               )
