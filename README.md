@@ -20,7 +20,8 @@ ex01 <br>
 - add changeText function in the onPressed function
 
 ex02 <br>
-- flutter create 
+- Add (wrap) row widget to display 0 row
+- Add column widget with 2 row widgets inside it 
 
 Resources:
 - https://www.youtube.com/watch?v=8sAyPDLorek&t=3635s

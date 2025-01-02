@@ -18,6 +18,18 @@ class MyApp extends StatelessWidget {
             style: TextStyle(color: Colors.white),
             ),
         ),
+        body: Container(
+          padding: EdgeInsets.all(20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: const [
+              Text(
+                '0',
+                style: TextStyle(fontSize: 24),
+                ),
+            ],
+          ),
+        )
       ),
     ); 
   }
