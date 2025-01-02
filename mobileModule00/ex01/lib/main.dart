@@ -17,7 +17,14 @@ class _MyAppState extends State<MyApp> {
 
   void changeText() {
     setState(() {
-      displayText = "Hello World";
+      if (displayText == "A simple text") {
+        displayText = "Hello World";
+      }
+      else {
+        displayText = "A simple text";
+      }
+      // or the one liner below
+      // displayText = displayText == "A simple text" ? "Hello World" : "A simple text";
     });
   }
 
